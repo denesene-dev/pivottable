@@ -5,3 +5,11 @@
 #wrapper {
   @apply flex items-center justify-center w-full h-screen;
 }
+
+.pvtAxisContainer {
+  background-color: #ff480020;
+  border-color: #ff480020;
+}
+.pvtAxisContainer li span.pvtAttr {
+  background-color: aqua;
+}
