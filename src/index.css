@@ -20,27 +20,32 @@
 }
 
 .pvtTotalLabel {
-  background-color: #ff4800 !important;
+  background-color: #ff480010 !important;
   border-color: #ff4800;
 }
 
 .pvtAxisLabel {
-  background-color: #ff4800 !important;
+  background-color: #fff !important;
   border-color: #ff4800;
 }
 
 .pvtRowLabel {
-  background-color: #ff4800 !important;
+  background-color: #fff !important;
   border-color: #ff4800;
 }
 
+.pvtVals {
+  background-color: #ff480010 !important;
+  border-color: #ff480020;
+}
+
 .pvtColLabel {
-  background-color: #0e0d0d20 !important;
+  background-color: #ff480010 !important;
   border-color: #ff4800;
 }
 
 .pvtAxisContainer li span.pvtAttr {
-  background-color: #ff4800;
+  background-color: #ff4800de;
   border-color: #fff;
   border-radius: 20px;
   color: #fff;
