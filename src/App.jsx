@@ -29,11 +29,13 @@ export default function App() {
           item.MaritalStatus,
           item.HasChildren,
           item.EducationDegreeName,
-          item.JobStatus,
+          item.JobStatus === "E" ? "Çalışıyor" : "Çalışmıyor",
           item.MonthlyIncomeDesc,
           item.HasPet,
-          item.HasSocialMediaAccount,
-          item.HouseStatus,
+          item.HasSocialMediaAccount === "1"
+            ? "Sosyal Medya Kullanıyor"
+            : "Sosyal Medya Kullanmıyor",
+          item.HouseStatus === "S" ? "Ev Sahibi" : "Kiracı",
           item.Sex === "E" ? "Erkek" : "Kadın",
           item.BirthDate,
           item.CityId,

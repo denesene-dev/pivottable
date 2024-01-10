@@ -4,10 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#wrapper {
-  @apply flex items-center justify-center w-full h-screen;
-}
-
 * {
   scroll-behavior: smooth !important;
   -webkit-tap-highlight-color: transparent;
