@@ -26,12 +26,12 @@ export default function App() {
       console.log(data);
       const formattedData = data.map((item) => {
         const orderedValues = [
-          item.MaritalStatus,
-          item.HasChildren,
+          item.MaritalStatus === "B" ? "Bekar" : "Evli",
+          item.HasChildren === "1" ? "Var" : "Yok",
           item.EducationDegreeName,
           item.JobStatus === "E" ? "Çalışıyor" : "Çalışmıyor",
           item.MonthlyIncomeDesc,
-          item.HasPet,
+          item.HasPet === "E" ? "Var" : "Yok",
           item.HasSocialMediaAccount === "1"
             ? "Sosyal Medya Kullanıyor"
             : "Sosyal Medya Kullanmıyor",
