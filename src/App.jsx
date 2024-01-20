@@ -12,6 +12,38 @@ const api = axios.create({
   baseURL: "https://dene-sene.net/api",
 });
 
+const calculateAge = (BirthDate) => {
+  const currentDate = new Date();
+  const birthDate = new Date(BirthDate);
+
+  const ageInMilliseconds = currentDate - birthDate;
+  const ageInYears = Math.floor(
+    ageInMilliseconds / (365.25 * 24 * 60 * 60 * 1000)
+  );
+  console.log(ageInMilliseconds);
+  if (ageInYears < 20) {
+    return "18-19";
+  } else if (ageInYears === 20 && ageInYears < 25) {
+    return "20-24";
+  } else if (ageInYears === 25 && ageInYears < 30) {
+    return "25-29";
+  } else if (ageInYears === 30 && ageInYears < 35) {
+    return "30-34";
+  } else if (ageInYears === 35 && ageInYears < 40) {
+    return "35-39";
+  } else if (ageInYears === 40 && ageInYears < 45) {
+    return "40-44";
+  } else if (ageInYears === 45 && ageInYears < 50) {
+    return "45-49";
+  } else if (ageInYears === 50 && ageInYears < 55) {
+    return "50-54";
+  } else if (ageInYears === 55 && ageInYears < 60) {
+    return "55-59";
+  } else if (ageInYears === 60 && ageInYears < 65) {
+    return "60-64";
+  }
+};
+
 export default function App() {
   const [state, setState] = useState({});
   const [isDataLoading, setIsDataLoading] = useState(false);
@@ -37,7 +69,7 @@ export default function App() {
             : "Sosyal Medya Kullanmıyor",
           item.HouseStatus === "S" ? "Ev Sahibi" : "Kiracı",
           item.Sex === "E" ? "Erkek" : "Kadın",
-          item.BirthDate,
+          calculateAge(item.BirthDate),
           item.CityId,
           item.LanguageId,
         ];
