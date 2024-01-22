@@ -20,27 +20,25 @@ const calculateAge = (BirthDate) => {
   const ageInYears = Math.floor(
     ageInMilliseconds / (365.25 * 24 * 60 * 60 * 1000)
   );
-  console.log(ageInMilliseconds);
+
   if (ageInYears < 20) {
     return "18-19";
-  } else if (ageInYears === 20 && ageInYears < 25) {
+  } else if (ageInYears === 20 || ageInYears < 25) {
     return "20-24";
-  } else if (ageInYears === 25 && ageInYears < 30) {
+  } else if (ageInYears === 25 || ageInYears < 30) {
     return "25-29";
-  } else if (ageInYears === 30 && ageInYears < 35) {
+  } else if (ageInYears === 30 || ageInYears < 35) {
     return "30-34";
-  } else if (ageInYears === 35 && ageInYears < 40) {
+  } else if (ageInYears === 35 || ageInYears < 40) {
     return "35-39";
-  } else if (ageInYears === 40 && ageInYears < 45) {
+  } else if (ageInYears === 40 || ageInYears < 45) {
     return "40-44";
-  } else if (ageInYears === 45 && ageInYears < 50) {
+  } else if (ageInYears === 45 || ageInYears < 50) {
     return "45-49";
-  } else if (ageInYears === 50 && ageInYears < 55) {
+  } else if (ageInYears === 50 || ageInYears < 55) {
     return "50-54";
-  } else if (ageInYears === 55 && ageInYears < 60) {
-    return "55-59";
-  } else if (ageInYears === 60 && ageInYears < 65) {
-    return "60-64";
+  } else {
+    return "Gruplandırılamadı";
   }
 };
 
